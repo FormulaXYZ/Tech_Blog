@@ -1,9 +1,9 @@
-const commentFormHandler = async function(event) {
+const loginFormHandler = async function(event) {
     event.preventDefault();
     const usernameEl = document.querySelector('#username-input-login');
-    const passwordEl = document.querySelector('#password-input-ploin');
+    const passwordEl = document.querySelector('#password-input-login');
 
-constbresponse = await fetch('api/user/login', {
+const response = await fetch('api/user/login', {
     method:'POST',
     body:JSON.stringify({
         username: usernameEl.value,
@@ -13,8 +13,7 @@ constbresponse = await fetch('api/user/login', {
         ' content-type':'applicaation/json'}
 
 })
-    if (Response.ok){
-        document.location.replace('/dashboard');
+    if (response.ok){document.location.replace('/dashboard');
     }else {
         alert('could not login');
     }
