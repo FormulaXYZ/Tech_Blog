@@ -1,4 +1,12 @@
-const commentFormHandler = async function(event) {
-    event.preventDefault();
-    const usernameEl = document.querySelector('#username-input-login');
-    const passwordEl = document.querySelector('#password-input-ploin');
+const logout = async function(){
+    const Response = await fetch('/api/user/logout', {
+        method: 'POST',
+        headers:{'content-type': application/json},
+    });
+    if (Response.ok){
+        document.location.replace('/');
+    }else { alert('could not log out');}
+};
+document.querySelector(
+    '#logout-link'
+).addEventListener('click', logout);

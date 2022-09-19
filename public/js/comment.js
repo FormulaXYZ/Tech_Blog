@@ -9,7 +9,7 @@ if (body){
     body:JSON.stringify({
         postId, body
     }),
-    Headers:{' content-type':'applicaation/json' }
+    headers:{' content-type':'applicaation/json' }
     });
     
    document.location.reload();
