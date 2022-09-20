@@ -28,7 +28,7 @@ const user = connection.define('user',{
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'user',
+        modelName: 'users',
       
 })
 user.beforeCreate(async user =>{user.password = await bcrypt.hash(user.password, 10);});
