@@ -31,6 +31,6 @@ const user = connection.define('user',{
         modelName: 'users',
       
 })
-user.beforeCreate(async user =>{user.password = await bcrypt.hash(user.password, 10);});
+user.beforeCreate(async user =>{userDat.password = await bcrypt.hash(userData.password, 10);});
 
 module.exports = user;
