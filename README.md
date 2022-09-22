@@ -1,6 +1,6 @@
 # Tech Blog
 
-[Heroku-Link]()
+[Heroku-Link](https://ancient-peak-40502.herokuapp.com/)
 
 ![screenshot](./images/tech-blog1.png)
 ![screenshot](./images/tech-blog2.png)
