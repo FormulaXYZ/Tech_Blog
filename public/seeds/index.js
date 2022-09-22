@@ -1,54 +1,54 @@
 
-const{user,post,comment} = require('../models');
+const { user, post, comment } = require('../models');
 
-const  users = [
+const user = [
 
     {
-        username:'sammy',
-    password:'sammyxyz',
+        username: 'sammy',
+        password: 'sammyxyz',
     },
 
     {
-        username:'jimmy',
-    password:'123jimmy',
+        username: 'jimmy',
+        password: '123jimmy',
     },
 
     {
-        username:'robel',
-    password:'robel123',
+        username: 'robel',
+        password: 'robel123',
     },
 
     {
-        username:'boby',
-    password:'bobyinthehouse',
+        username: 'boby',
+        password: 'bobyinthehouse',
     },
 ]
-const posts = [
+const post = [
 
     {
         title: 'I like to move it move it',
         content: 'moving is good',
-        user_id: 1  
-    }, 
+        user_id: 1
+    },
     {
         title: 'making our world better',
         content: 'how to cahnge the world to make it better',
-        user_id: 2  
-    }, 
+        user_id: 2
+    },
     {
         title: 'vaction',
         content: 'picking greater vaction spot',
-        user_id: 3  
+        user_id: 3
     },
     {
         title: 'home made furniture',
         content: 'very easy ways to make great furnitures',
-        user_id: 4  
-    }, 
+        user_id: 4
+    },
 
 ]
 
-const comments = [
+const comment = [
 
     {
         Comment: 'I love the new movie',
@@ -64,6 +64,6 @@ const comments = [
 
     },
 ]
-const plantSeeds = async() => {await user.bulkCreate(users {individualHooks:true});await post.bulkCreate(posts);await comment.bulkCreate(comments);}
+const plantSeeds = async () => { await user.bulkCreate(user); await post.bulkCreate(post); await comment.bulkCreate(comment); }
 
-    plantSeeds();
+plantSeeds();
