@@ -6,7 +6,7 @@ router.get('/', async (req, res) => {
         const postData = await post.findAll({
             include: [user],
         });
-        const posts = postData.map((post) => post.get({ plain: true }));
+        const post = postData.map((post) => post.get({ plain: true }));
         res.render('all-posts', { post });
     } catch (err) {
         res.status(500).json(err);
