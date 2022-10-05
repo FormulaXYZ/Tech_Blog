@@ -26,7 +26,7 @@ const user = connection.define('user', {
     type: DataTypes.STRING,
     allowNull: false,
     validate: {
-      len: [10],
+      len: [6],
     },
   }
 

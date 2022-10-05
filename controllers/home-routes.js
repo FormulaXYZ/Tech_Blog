@@ -7,12 +7,14 @@ router.get('/', async (req, res) => {
             include: [user],
         });
         const posts = postData.map((post) => post.get({ plain: true }));
-        res.render('all-posts', { posts });
+        res.render('all-posts', { posts, loggedIn: req.session.loggedIn });
     } catch (err) {
         res.status(500).json(err);
     }
 });
-
+// route.get('/profile', (req, res) => {
+//     res.render("")
+// })
 router.get('/post/:id', async (req, res) => {
     try {
         const postData = await post.findByPk(req.params.id, {

@@ -1,29 +1,33 @@
 
 const { user, post, comment } = require('../models');
 
-const user = [
+const userData = [
 
     {
         username: 'sammy',
         password: 'sammyxyz',
+        email: 'sammy@gmail.com',
     },
 
     {
         username: 'jimmy',
         password: '123jimmy',
+        email: 'jimmy@yahoo.com'
     },
 
     {
         username: 'robel',
         password: 'robel123',
+        email: 'robel@gmail.com',
     },
 
     {
         username: 'boby',
         password: 'bobyinthehouse',
+        email: 'bobyl@gmail.com',
     },
 ]
-const post = [
+const postData = [
 
     {
         title: 'I like to move it move it',
@@ -48,22 +52,22 @@ const post = [
 
 ]
 
-const comment = [
+const commentData = [
 
     {
-        Comment: 'I love the new movie',
+        content: 'I love the new movie',
         user_id: 1,
         post_id: 2
 
     },
 
     {
-        Comment: 'what a nice day to be programer',
+        content: 'what a nice day to be programer',
         user_id: 2,
         post_id: 1
 
     },
 ]
-const plantSeeds = async () => { await user.bulkCreate(user); await post.bulkCreate(post); await comment.bulkCreate(comment); }
+const plantSeeds = async () => { await user.bulkCreate(userData); await post.bulkCreate(postData); await comment.bulkCreate(commentData); }
 
 plantSeeds();
