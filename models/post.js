@@ -14,10 +14,10 @@ const post = connection.define('post', {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  username: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
+  // username: {
+  //   type: DataTypes.STRING,
+  //   allowNull: false,
+  // },
 
   content: {
     type: DataTypes.TEXT,

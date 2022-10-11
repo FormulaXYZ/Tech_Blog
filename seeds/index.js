@@ -68,6 +68,10 @@ const commentData = [
 
     },
 ]
-const plantSeeds = async () => { await user.bulkCreate(userData); await post.bulkCreate(postData); await comment.bulkCreate(commentData); }
+const plantSeeds = async () => {
+    // await user.bulkCreate(userData);
+    await post.bulkCreate(postData);
+    await comment.bulkCreate(commentData);
+}
 
 plantSeeds();

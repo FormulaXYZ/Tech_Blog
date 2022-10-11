@@ -1,8 +1,7 @@
 module.exports = {
-    format_date :date => {
-      
-    
-      return `${ Date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`
-    },
-  };
-  
+  format_date: date => {
+
+
+    return `${new Date().getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`
+  },
+};
